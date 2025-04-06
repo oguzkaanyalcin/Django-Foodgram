@@ -4,7 +4,7 @@ Bu proje, kullanıcıların yemek tariflerini kategoriye göre listeleyip filtre
 
 Proje, Python tabanlı Django web çatısı kullanılarak geliştirilmiştir. Veritabanı olarak SQLite tercih edilmiştir. Arayüz tasarımı için Bootstrap kütüphanesi kullanılarak responsive (mobil uyumlu) ve kullanıcı dostu bir deneyim sağlanmıştır.
 
----
+----
 
 ## Ana sayfa Görünümü
 
@@ -26,7 +26,7 @@ Proje, Python tabanlı Django web çatısı kullanılarak geliştirilmiştir. Ve
 
 ![Yemek Tarifi Sayfası](images/5.png)
 
----
+----
 
 ## Geliştiriciler
 
