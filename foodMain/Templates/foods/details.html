@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block page_title %}
+{{ recipe.title }}
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="container_details">
+    <div class="recipe_details">
+        <img src="{% static 'foods/images/'|add:recipe.image_url %}" alt="{{ recipe.title }}" >
+      <div class="content_details">
+        <h1 class="title_details">{{ recipe.title }}</h1>
+        <p># {{ recipe.subtitle }}</p>
+        <p class="description_details">{{ recipe.description|safe }}</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include "foods/partials/_footer.html" %}
+{% endblock footer %}

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarif Dünyası - {% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="{% static "foods/images/icon.ico" %}"/>
+</head>
+{% include "pages/loading.html" %}
+<body>
+    <div class="fixer">
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand"><img src="{% static "foods/images/icon.ico" %}" style="height: 30px;"> Tarif Dünyası</a>
+            <button id="sag-menu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+                <span id="menu-link" class="menu-link" style="margin-left: 90px; display: none; position: absolute; top: 100%; left: 0; background-color: black; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); border-radius: 5px; padding: 10px;">
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                    <a href="/category" class="nav-linkk" style="font-size: 20px; color: #fff; display: block;"><i class="fas fa-utensils" style="margin-right: 5px;"></i> Tarifler</a>
+                </span> 
+            </button>      
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="/category" class="nav-linkk" style="font-size: 20px;"><i class="fas fa-utensils"></i> Tarifler</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-navv">
+                <li class="nav-item">
+                    <a href="#" class="nav-linkk login-btn"><i class="fa-solid fa-user"></i> Üye Girişi</a>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+</div>
+        {% block content %} 
+        {% endblock content %}
+
+    {% block footer %}
+    {% endblock footer %}
+</div>
+
+</div>
+
+<script src="{% static "js/menu.js" %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

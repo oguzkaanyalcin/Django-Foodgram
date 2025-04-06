@@ -1,0 +1,14 @@
+{% load static %}
+
+      <div class="card2">
+        <img src="{% static 'foods/images/'|add:rc.image_url %}" alt="{{ rc.title }}">
+        <div class="content2">
+            <h2 class="title2">{{ rc.title|title }}</h2>
+            <p class="description2">{{ rc.subtitle }}</p>
+            <p class="date2">{% if rc.isUpdate %}
+                <span class="badge bg-success">Güncellendi ✓</span><br>
+                {% endif %} 
+                <span class="badge bg-danger">{{ rc.date|date:'d F l Y' }}</span></p>
+                <a href="{% url 'recipe_details' rc.slug %}" class="tarif-button">Tarife Bak <i class="fa-regular fa-eye"></i></a>
+          </div>
+        </div>

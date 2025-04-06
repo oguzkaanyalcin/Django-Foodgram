@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block page_title %}
+Tarifler
+{% endblock page_title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+       <div class="index_container">
+            {% if page_obj.object_list|length == 0 %}
+            Tarif bulunamadı.
+            {% endif %}
+            <div class="container2">
+              {% if selectCategory %}
+              <div class="section-titles">{{ selectCategory.title }} Kategorisi</div>
+              {% endif %}
+              <div class="card2-group">
+            {% for rc in page_obj.object_list %}
+            {% include "foods/partials/_tarifler.html" %}
+            {% endfor %}
+          </div>
+        </div>
+
+            {% if page_obj.paginator.num_pages > 1 %}
+            <nav aria-label="Page navigation example">
+                <ul class="pagination-world">   
+                    {% if page_obj.has_previous %}
+                    <li class="page-item-world"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-angle-left mr-2"></i> Önceki</a></li>
+                    {% else %}
+                    <li class="page-item-world disabled"><a class="page-link"><i class="fa-solid fa-chevron-left"></i> Önceki</a></li>
+                    {% endif %}
+                    
+                    {% for i in page_obj.paginator.page_range %}
+                    {% if page_obj.number == i %}
+                    <li class="page-item-world"><a class="page-link" href="#">{{ i }}</a></li>
+                    {% else %}
+                    <li class="page-item-world"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <li class="page-item-world"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Sonraki <i class="fas fa-angle-right ml-2"></i></a></li>
+                    {% else %}
+                    <li class="page-item-world disabled"><a class="page-link">Sonraki <i class="fas fa-angle-right ml-2"></i></a></li>
+                    {% endif %}
+                    
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+        
+</div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+{% include "foods/partials/_footer.html" %}
+{% endblock footer %}

@@ -1,0 +1,8 @@
+{% load static %}
+
+      <div class="card3">
+        <a href="{% url 'tarif_by_category' rc.slug %}">
+        <img src="{% static 'foods/images/'|add:rc.image_url %}" alt="{{ rc.title }}">
+        <h4 class="title3">{{ rc.name|title }}</h4>
+        </a>
+        </div>
