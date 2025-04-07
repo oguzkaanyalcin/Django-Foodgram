@@ -31,4 +31,4 @@ Proje, Python tabanlı Django web çatısı kullanılarak geliştirilmiştir. Ve
 ## Geliştiriciler
 
 - [Oğuz Kaan Yalçın](https://github.com/oguzkaanyalcin)
-- [Bora Kitirci](https://github.com/bboraki)
+- [Bora Kitirci](https://github.com/borakitirci)
